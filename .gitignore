@@ -1,0 +1,9 @@
+# created by virtualenv automatically
+.idea/
+.env/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*~
+*.bak
