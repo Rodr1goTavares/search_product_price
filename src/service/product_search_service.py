@@ -14,8 +14,7 @@ class ProductSearchService:
             soup = BeautifulSoup(search_result, 'html.parser')
             name = soup.find('h2', class_='ui-search-item__title shops__item-title').get_text()
             price = soup.find('span', class_='andes-money-amount__fraction').get_text()
-            result = "Store: Mercado Livre" + "\nName: " + name + "\nPrice: R$" + price + "\nDate: " + date + "\nLink: " + url + "\n----------"
-            print(result)
+            result = "Store: Mercado Livre" + "\nName: " + name + "\nPrice: R$" + price + "\nDate: " + date + "\n-"
             return (result)
         except Exception as error:
             print("Error to search product in Mercado Livre: " + str(error))
@@ -28,8 +27,7 @@ class ProductSearchService:
             soup = BeautifulSoup(search_result, 'html.parser')
             name = soup.find('span', class_='a-size-base-plus a-color-base a-text-normal').get_text()
             price = soup.find('span', class_='a-price-whole').get_text()
-            result = "Store: Amazon" + "\nName: " + name + "\nPrice: R$" + price + "\nDate: " + date + "\nLink: " + url +  "\n----------"
-            print(result)
+            result = "Store: Amazon" + "\nName: " + name + "\nPrice: R$" + price + "\nDate: " + date +  "\n----------\n"
             return (result)
         except Exception as error:
             print("Error to search product in Amazon: " + str(error))
